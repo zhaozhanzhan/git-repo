@@ -1,6 +1,6 @@
 1. `git init`&emsp;初始化当前目录为 &nbsp;_`git`_&nbsp;版本库;
 2. `git add [fileName]`&emsp;添加文件给 &nbsp;_`git`_ &nbsp;库管理;
-3. `git commit -m(message) "提交说明"`&emsp;提交文件给 &nbsp;_`git`_ &nbsp;库暂存;
+3. `git commit -m(message) "提交说明"`&emsp;提交当前库的文件给 &nbsp;_`git`_ &nbsp;当前分支;
 4. `git status`&emsp;查看文件修改状态;
 5. `git diff`&emsp;显示文件的不同，查看修改过的位置;
 6. `git log --pretty=oneline`&emsp;查看提交日志，显示每一次提交到暂存库的 ID、作者、日期;
@@ -11,3 +11,5 @@
    - 用&nbsp;`HEAD^`&nbsp;表示上一个版本;
    - 用&nbsp;`HEAD^^`&nbsp;表示上上个版本;
    - 用&nbsp;`HEAD~100`&nbsp;表示前&nbsp;**100**&nbsp;个版本;
+8. `git reflog`&emsp;记录每一次执行过的命令，可用于找到历史&nbsp;_`commitId`_;
+9. `git checkout -- 文件名`&emsp;丢弃工作区的修改，也就是撤销工作区的全部修改&nbsp;_`commitId`_;
