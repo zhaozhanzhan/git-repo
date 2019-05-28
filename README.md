@@ -12,4 +12,4 @@
    - 用&nbsp;`HEAD^^`&nbsp;表示上上个版本;
    - 用&nbsp;`HEAD~100`&nbsp;表示前&nbsp;**100**&nbsp;个版本;
 8. `git reflog`&emsp;记录每一次执行过的命令，可用于找到历史&nbsp;_`commitId`_;
-9. `git checkout -- 文件名`&emsp;丢弃工作区的修改，也就是撤销工作区的全部修改&nbsp;_`commitId`_;
+9. `git checkout -- 文件名`&emsp;丢弃工作区的修改，也就是撤销工作区的全部修改;
