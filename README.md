@@ -14,3 +14,4 @@
 8. `git reflog`&emsp;记录每一次执行过的命令，可用于找到历史&nbsp;_`commitId`_;
 9. `git checkout -- 文件名`&emsp;丢弃工作区的修改，也就是撤销工作区的全部修改;
    - `--`&nbsp;很重要，没有&nbsp;`--`&nbsp;，就变成了&emsp;**切换到另一个分支**&emsp;的命令;
+10. `git reset HEAD 文件名`&emsp;把暂存区的修改撤销掉，重新放回工作区;
