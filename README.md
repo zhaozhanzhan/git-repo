@@ -19,4 +19,10 @@
 12. `ssh-keygen -t rsa -C "邮箱"`&emsp;创建&ensp;`SSH Key`&ensp;;
 13. `git remote add origin git@github.com:GitHub用户名/仓库名.git`&emsp;建立与远程仓库的连接;
 14. `git push -u origin master`&emsp;把当前分支 master 推送到远程;
-    - `-u` &nbsp;Git 不但会把本地的&nbsp;`master`&nbsp;分支内容推送到远程新的 master 分支，还会把本地的&nbsp;`master`&nbsp;分支和远程的&nbsp;`master`&nbsp;分支关联起来，在以后的推送或者拉取时就可以简化命令;
+    - `-u` &nbsp;Git 不但会把本地的&nbsp;`master`&nbsp;分支内容推送到远程新的&nbsp;`master`&nbsp;分支，还会把本地的&nbsp;`master`&nbsp;分支和远程的&nbsp;`master`&nbsp;分支关联起来，在以后的推送或者拉取时就可以简化命令;
+15. `git clone`&emsp;从远程服务器克隆仓库到本地;
+16. `git branch`&emsp;命令会列出所有分支，当前分支前面会标一个&nbsp;`*`&nbsp;号;
+17. `git checkout -b 分支名`&emsp;从远程服务器克隆仓库到本地;
+    - `-b`&nbsp;参数表示创建并切换到新分支，相当于&nbsp;`git branch dev`&nbsp;和&nbsp;`git checkout dev`;
+18. `git merge 分支名`&emsp;命令用于合并指定分支到当前分支;
+19. `git branch -d 分支名`&emsp;命令用于**删除**指定分支;
