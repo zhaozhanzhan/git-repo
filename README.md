@@ -26,3 +26,6 @@
     - `-b`&nbsp;参数表示创建并切换到新分支，相当于&nbsp;`git branch dev`&nbsp;和&nbsp;`git checkout dev`;
 18. `git merge 分支名`&emsp;命令用于合并指定分支到当前分支;
 19. `git branch -d 分支名`&emsp;命令用于**删除**指定分支;
+20. `git push origin -d 分支名`&emsp;命令用于**删除**远程分支;
+    - 先通过&nbsp;`git branch -d 分支名`&emsp;删除本地分支;
+    - 再通过&nbsp;`git push origin : 分支名`&emsp;删除远程分支;
