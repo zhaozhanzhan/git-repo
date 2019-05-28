@@ -5,6 +5,7 @@
 5. `git diff`&emsp;显示文件的不同，查看修改过的位置;
 6. `git log --pretty=oneline`&emsp;查看提交日志，显示每一次提交到暂存库的 ID、作者、日期;
    - `--pretty=oneline` &nbsp;将每次提交格式化显示为一行;
+   - `-1`&nbsp;显示最近的一次提交;
 7. `git reset --hard HEAD^`&emsp;回退到上一个版本;
    - `--hard` &nbsp;重置索引和工作树,之后对工作树中跟踪文件的任何更改&nbsp;_`commit`_&nbsp;都将被丢弃;
    - 用&nbsp;`HEAD`&nbsp;表示当前版本;
@@ -43,3 +44,14 @@
 26. `git pull`&emsp;拉取远程分支与本地分支合并;
     - 如果`git pull`提示`no tracking information`，则说明本地分支和远程分支的链接关系没有创建，用命令`git branch --set-upstream-to 分支名 origin/分支名`。
 27. `git tag <name>`&emsp;给分支打上标签，便于识别;
+    - - 用&nbsp;`-d`&nbsp;删除标签;
+28. `git show <tagname>`&emsp;查看标签信息;
+29. `git tag -a v0.1 -m "version 0.1 released" 1094adb`&emsp;给历史版本打上标签;
+    - 用&nbsp;`-a`&nbsp;指定标签名;
+    - 用&nbsp;`-m`&nbsp;指定说明文字;
+    - `1094adb`&nbsp;分支 ID;
+30. `git push origin <tagname>`&emsp;推送标签到远程仓库;
+31. `git config --global alias.st status`&emsp;配置别名，使用简写命令，`git st`看看效果;
+    - `git config --global alias.co checkout`&nbsp;用&nbsp;`co`&nbsp;表示&nbsp;`checkout`&nbsp;;
+    - `git config --global alias.ci commit`&nbsp;用&nbsp;`ci`&nbsp;表示&nbsp;`commit`&nbsp;;
+    - `git config --global alias.br branch`&nbsp;用&nbsp;`br`&nbsp;表示&nbsp;`branch`&nbsp;;
