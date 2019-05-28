@@ -29,3 +29,4 @@
 20. `git push origin -d 分支名`&emsp;命令用于**删除**远程分支;
     - 先通过&nbsp;`git branch -d 分支名`&emsp;删除本地分支;
     - 再通过&nbsp;`git push origin : 分支名`&emsp;删除远程分支;
+21. `git log --graph --pretty=oneline --abbrev-commit`&emsp;查看分支合并情况;
