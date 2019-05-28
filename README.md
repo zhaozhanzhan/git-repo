@@ -30,3 +30,6 @@
     - 先通过&nbsp;`git branch -d 分支名`&emsp;删除本地分支;
     - 再通过&nbsp;`git push origin : 分支名`&emsp;删除远程分支;
 21. `git log --graph --pretty=oneline --abbrev-commit`&emsp;查看分支合并情况;
+22. `git merge --no-ff -m "提交说明" 分支名`&emsp;强制禁用`Fast forward`模式合并分支;
+    - 合并分支时，加上`--no-ff`参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并;
+    - 本次合并要创建一个新的&nbsp;`commit`，所以加上&nbsp;`-m`&nbsp;参数，把&nbsp;`commit`&nbsp;描述写进去;
