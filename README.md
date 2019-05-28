@@ -42,3 +42,4 @@
 25. `git remote -v`&emsp;查看远程详细信息;
 26. `git pull`&emsp;拉取远程分支与本地分支合并;
     - 如果`git pull`提示`no tracking information`，则说明本地分支和远程分支的链接关系没有创建，用命令`git branch --set-upstream-to 分支名 origin/分支名`。
+27. `git tag <name>`&emsp;给分支打上标签，便于识别;
