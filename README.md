@@ -22,7 +22,7 @@
     - `-u` &nbsp;Git 不但会把本地的&nbsp;`master`&nbsp;分支内容推送到远程新的&nbsp;`master`&nbsp;分支，还会把本地的&nbsp;`master`&nbsp;分支和远程的&nbsp;`master`&nbsp;分支关联起来，在以后的推送或者拉取时就可以简化命令;
 15. `git clone`&emsp;从远程服务器克隆仓库到本地;
 16. `git branch`&emsp;命令会列出所有分支，当前分支前面会标一个&nbsp;`*`&nbsp;号;
-17. `git checkout -b 分支名`&emsp;从远程服务器克隆仓库到本地;
+17. `git checkout -b 分支名`&emsp;创建+切换分支;
     - `-b`&nbsp;参数表示创建并切换到新分支，相当于&nbsp;`git branch dev`&nbsp;和&nbsp;`git checkout dev`;
 18. `git merge 分支名`&emsp;命令用于合并指定分支到当前分支;
 19. `git branch -d 分支名`&emsp;命令用于**删除**指定分支;
