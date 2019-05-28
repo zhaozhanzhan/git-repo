@@ -17,3 +17,4 @@
 10. `git reset HEAD 文件名`&emsp;把暂存区的修改撤销掉，重新放回工作区;
 11. `git rm 文件名`&emsp;删除该文件，&nbsp;`git commit`&nbsp;后就从&nbsp;_`git`_ &nbsp;版本库中移除了;
 12. `ssh-keygen -t rsa -C "邮箱"`&emsp;创建&ensp;`SSH Key`&ensp;;
+13. `git remote add origin git@github.com:GitHub用户名/仓库名.git`&emsp;建立与远程仓库的连接;
