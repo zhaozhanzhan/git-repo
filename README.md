@@ -26,10 +26,16 @@
     - `-b`&nbsp;参数表示创建并切换到新分支，相当于&nbsp;`git branch dev`&nbsp;和&nbsp;`git checkout dev`;
 18. `git merge 分支名`&emsp;命令用于合并指定分支到当前分支;
 19. `git branch -d 分支名`&emsp;命令用于**删除**指定分支;
-20. `git push origin -d 分支名`&emsp;命令用于**删除**远程分支;
+20. `git push origin -d 分支名`&emsp;命令用于**删除**远程分支，强行删除，需要使用大写的&nbsp;`-D`&nbsp;参数;
     - 先通过&nbsp;`git branch -d 分支名`&emsp;删除本地分支;
     - 再通过&nbsp;`git push origin : 分支名`&emsp;删除远程分支;
 21. `git log --graph --pretty=oneline --abbrev-commit`&emsp;查看分支合并情况;
 22. `git merge --no-ff -m "提交说明" 分支名`&emsp;强制禁用`Fast forward`模式合并分支;
     - 合并分支时，加上`--no-ff`参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并;
     - 本次合并要创建一个新的&nbsp;`commit`，所以加上&nbsp;`-m`&nbsp;参数，把&nbsp;`commit`&nbsp;描述写进去;
+23. `git stash`&emsp;把当前工作现场&nbsp;**储藏**&nbsp;起来，等以后恢复现场后继续工作;
+    - 工作只进行到一半，还没法提交，预计完成还需 1 天时间。但是，必须在两个小时内在&nbsp;`bug`&nbsp;分支修复&nbsp;`bug`&nbsp;时可使用;
+    - `git stash list`&emsp;查看储藏列表;
+    - 方法一用&nbsp;`git stash apply`&nbsp;恢复，但是恢复后，stash 内容并不删除，你需要用&nbsp;`git stash drop`&nbsp;来删除；
+    - 方法二用&nbsp;`git stash pop`&nbsp;，恢复的同时把 stash 内容也删了;
+24. `git remote -v`&emsp;查看远程详细信息;
