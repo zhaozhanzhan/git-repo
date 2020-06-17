@@ -14,11 +14,15 @@
 8. `git checkout -- 文件名`&emsp;丢弃工作区的修改，也就是撤销工作区的全部修改;
    - `--`&nbsp;很重要，没有&nbsp;`--`&nbsp;，就变成了&emsp;**切换到另一个分支**&emsp;的命令;
 9. `git reset --hard HEAD^`&emsp;回退本地代码到上一个版本;
-   - `--hard` &nbsp;重置索引和工作树,之后对工作树中跟踪文件的任何更改&nbsp;_`commit`_&nbsp;都将被丢弃;
+   - `--hard` &nbsp;删除工作空间改动代码，撤销 _`commit`_ ，撤销 _`git add`_ 注意完成这个操作后，就恢复到了上一次的 _`commit`_ , (状态重置索引和工作树,之后对工作树中跟踪文件的任何更改&nbsp;_`commit`_&nbsp;都将被丢弃);
+   - `--mixed` &nbsp;不删除工作空间改动代码，撤销 _`commit`_ ，并且撤销 _`git add`_ 这个为默认参数
+   - `--soft` &nbsp; 不删除工作空间改动代码，撤销 _`commit`_ ，不撤销 _`git add`_
    - 用&nbsp;`HEAD`&nbsp;表示当前版本;
    - 用&nbsp;`HEAD^`&nbsp;表示上一个版本;
    - 用&nbsp;`HEAD^^`&nbsp;表示上上个版本;
    - 用&nbsp;`HEAD~100`&nbsp;表示前&nbsp;**100**&nbsp;个版本;
+   - `git reset --soft HEAD^`&nbsp;仅仅是撤回 commit 操作，写的代码仍然保留;
+   - `git commit --amend` 修改 _`commit`_ 注释，此时会进入默认 vim 编辑器，修改注释完毕后保存就好了;
 10. `git revert <commitId>`&emsp;已经 push 到线上仓库的代码,回退本地代码时也想同时回退线上代码;
 11. `git reflog`&emsp;记录每一次执行过的命令，可用于找到历史&nbsp;_`commitId`_;
 12. `git reset HEAD 文件名`&emsp;把暂存区的修改撤销掉，重新放回工作区;
@@ -47,20 +51,23 @@
     - 方法一用&nbsp;`git stash apply`&nbsp;恢复，但是恢复后，stash 内容并不删除，你需要用&nbsp;`git stash drop`&nbsp;来删除；
     - 方法二用&nbsp;`git stash pop`&nbsp;，恢复的同时把 stash 内容也删了;
 27. `git remote -v`&emsp;查看远程详细信息;
-28. `git pull`&emsp;拉取远程分支与本地分支合并;
+28. `git remote set-url origin URL地址`&emsp;直接修改远程仓库地址;
+    - `git remote rm origin`&emsp;删除远程仓库地址;
+    - `git remote add origin URL地址`&emsp;添加远程仓库地址;
+29. `git pull`&emsp;拉取远程分支与本地分支合并;
     - 如果`git pull`提示`no tracking information`，则说明本地分支和远程分支的链接关系没有创建，用命令`git branch --set-upstream-to 分支名 origin/分支名`。
-29. `git tag <name>`&emsp;给分支打上标签，便于识别;
+30. `git tag <name>`&emsp;给分支打上标签，便于识别;
     - - 用&nbsp;`-d`&nbsp;删除标签;
-30. `git show <tagname>`&emsp;查看标签信息;
-31. `git tag -a v0.1 -m "version 0.1 released" 1094adb`&emsp;给历史版本打上标签;
+31. `git show <tagname>`&emsp;查看标签信息;
+32. `git tag -a v0.1 -m "version 0.1 released" 1094adb`&emsp;给历史版本打上标签;
     - 用&nbsp;`-a`&nbsp;指定标签名;
     - 用&nbsp;`-m`&nbsp;指定说明文字;
     - `1094adb`&nbsp;分支 ID;
-32. `git push origin <tagname>`&emsp;推送标签到远程仓库;
-33. `git config --global alias.st status`&emsp;配置别名，使用简写命令，`git st`看看效果;
+33. `git push origin <tagname>`&emsp;推送标签到远程仓库;
+34. `git config --global alias.st status`&emsp;配置别名，使用简写命令，`git st`看看效果;
     - `git config --global alias.co checkout`&nbsp;用&nbsp;`co`&nbsp;表示&nbsp;`checkout`&nbsp;;
     - `git config --global alias.ci commit`&nbsp;用&nbsp;`ci`&nbsp;表示&nbsp;`commit`&nbsp;;
     - `git config --global alias.br branch`&nbsp;用&nbsp;`br`&nbsp;表示&nbsp;`branch`&nbsp;;
-34. `git config`&emsp;
+35. `git config`&emsp;
     - `git config --global user.name "username"`&emsp;修改用户名;
     - `git config --global user.email "email"`&emsp;修改邮箱;
