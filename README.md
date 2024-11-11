@@ -72,3 +72,4 @@
     - `git config --global user.name "username"`&emsp;修改用户名;
     - `git config --global user.email "email"`&emsp;修改邮箱;
 36. `git pull origin master --allow-unrelated-histories`&emsp;远程仓库的master分支合并到当前分支，允许合并两个不相关的仓库历史
+37. `git rm 要忽略的文件`&emsp;`git commit -a -m "删除不需要的文件"`&emsp;在`.gitignore`文件中忽略已经被提交跟踪的文件
