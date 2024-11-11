@@ -37,10 +37,10 @@
     - `-b`&nbsp;参数表示创建并切换到新分支，相当于&nbsp;`git branch dev`&nbsp;和&nbsp;`git checkout dev`;
 20. `git checkout -b 分支名 origin/分支名`&emsp;切换到远程分支;
 21. `git merge 分支名`&emsp;命令用于合并指定分支到当前分支;
-22. `git branch -d 分支名`&emsp;命令用于**删除**指定分支;
-23. `git push origin -d 分支名`&emsp;命令用于**删除**远程分支，强行删除，需要使用大写的&nbsp;`-D`&nbsp;参数;
+22. `git branch -d 分支名`&emsp;命令用于**删除**指定分支，强行删除，需要使用大写的&nbsp;`-D`&nbsp;参数;
+23. `git push origin --delete 分支名`&emsp;命令用于**删除**远程分支;
     - 先通过&nbsp;`git branch -d 分支名`&emsp;删除本地分支;
-    - 再通过&nbsp;`git push origin : 分支名`&emsp;删除远程分支;
+    - 再通过&nbsp;`git push origin :分支名`&emsp;删除远程分支;
 24. `git log --graph --pretty=oneline --abbrev-commit`&emsp;查看分支合并情况;
 25. `git merge --no-ff -m "提交说明" 分支名`&emsp;强制禁用`Fast forward`模式合并分支;
     - 合并分支时，加上`--no-ff`参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并;
